@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Tela de Boas-vindas -->
+     <div id="welcome-screen" class="screen">
+
+        <h1>Bem-vindo ao Jogo de Adivinhação</h1>
+        <hr class="customHr">
+        <form id="name-form">
+            <label for="name">Digite seu nome:</label>
+            <hr class="customHr">
+            <input type="text" id="name" required>
+            <button type="submit">Jogar</button>
+        </form>
+    </div>
+
+    <!-- Tela de Jogo -->
+    <div id="game-screen" class="screen" style="display: none;">
+        <h1 id="welcome-message"></h1>
+        <p>Tente adivinhar o número entre 1 e 100:</p>
+        <hr class="customHr">
+        <input type="number" id="guess" min="1" max="100">
+        <button id="guess-button">Adivinhar</button>
+        <p id="feedback"></p>
+    </div>
+
+    <!-- Tela de Resultado -->
+    <div id="result-screen" class="screen" style="display: none;">
+        <h1>Parabéns <span id="result-name"></span>!</h1>
+        <hr class="customHr">
+        <p>Você adivinhou o número <span id="correct-number"></span> Corretamente!</p>
+        <p>Sua pontuação: <span id="score"></span> Tentativas</p>
+        <button id="play-again-button">Jogar Novamente</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
